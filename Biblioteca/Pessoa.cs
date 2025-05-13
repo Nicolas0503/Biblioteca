@@ -61,5 +61,11 @@ namespace Biblioteca
         {
 
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            comboBox1.DataSource = Enum.GetValues(typeof(EnumFuncionarioCargo));
+            comboBox1.SelectedIndex = 0;
+        }
     }
 }

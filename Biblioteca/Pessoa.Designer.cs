@@ -38,37 +38,37 @@
             toolTip2 = new ToolTip(components);
             toolTip3 = new ToolTip(components);
             groupBox1 = new GroupBox();
-            textBox1 = new TextBox();
-            label1 = new Label();
-            dateTimePicker1 = new DateTimePicker();
-            maskedTextBox1 = new MaskedTextBox();
-            maskedTextBox2 = new MaskedTextBox();
-            Nascimento = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
             maskedTextBox3 = new MaskedTextBox();
+            label4 = new Label();
+            label3 = new Label();
+            label2 = new Label();
+            Nascimento = new Label();
+            maskedTextBox2 = new MaskedTextBox();
+            maskedTextBox1 = new MaskedTextBox();
+            dateTimePicker1 = new DateTimePicker();
+            label1 = new Label();
+            textBox1 = new TextBox();
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
-            tabPage2 = new TabPage();
-            Leitor = new Label();
             listBox1 = new ListBox();
-            comboBox1 = new ComboBox();
-            numericUpDown1 = new NumericUpDown();
-            numericUpDown2 = new NumericUpDown();
-            textBox2 = new TextBox();
-            label5 = new Label();
-            label6 = new Label();
-            label7 = new Label();
+            Leitor = new Label();
+            tabPage2 = new TabPage();
             label8 = new Label();
+            label7 = new Label();
+            label6 = new Label();
+            label5 = new Label();
+            textBox2 = new TextBox();
+            numericUpDown2 = new NumericUpDown();
+            numericUpDown1 = new NumericUpDown();
+            comboBox1 = new ComboBox();
             button1 = new Button();
             contextMenuStrip3.SuspendLayout();
             groupBox1.SuspendLayout();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             SuspendLayout();
             // 
             // contextMenuStrip1
@@ -122,63 +122,22 @@
             groupBox1.Text = "Pessoa";
             groupBox1.Enter += groupBox1_Enter;
             // 
-            // textBox1
+            // maskedTextBox3
             // 
-            textBox1.Location = new Point(67, 62);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(293, 27);
-            textBox1.TabIndex = 0;
+            maskedTextBox3.Location = new Point(65, 368);
+            maskedTextBox3.Mask = "(999) 000-0000";
+            maskedTextBox3.Name = "maskedTextBox3";
+            maskedTextBox3.Size = new Size(291, 27);
+            maskedTextBox3.TabIndex = 10;
             // 
-            // label1
+            // label4
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(65, 39);
-            label1.Name = "label1";
-            label1.Size = new Size(50, 20);
-            label1.TabIndex = 1;
-            label1.Text = "Nome";
-            // 
-            // dateTimePicker1
-            // 
-            dateTimePicker1.Location = new Point(67, 128);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(293, 27);
-            dateTimePicker1.TabIndex = 2;
-            // 
-            // maskedTextBox1
-            // 
-            maskedTextBox1.Location = new Point(67, 200);
-            maskedTextBox1.Mask = "000.000.000-00";
-            maskedTextBox1.Name = "maskedTextBox1";
-            maskedTextBox1.Size = new Size(291, 27);
-            maskedTextBox1.TabIndex = 3;
-            // 
-            // maskedTextBox2
-            // 
-            maskedTextBox2.Location = new Point(65, 286);
-            maskedTextBox2.Name = "maskedTextBox2";
-            maskedTextBox2.Size = new Size(291, 27);
-            maskedTextBox2.TabIndex = 4;
-            // 
-            // Nascimento
-            // 
-            Nascimento.AutoSize = true;
-            Nascimento.Location = new Point(65, 105);
-            Nascimento.Name = "Nascimento";
-            Nascimento.Size = new Size(88, 20);
-            Nascimento.TabIndex = 6;
-            Nascimento.Text = "Nascimento";
-            Nascimento.Click += Nascimento_Click;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(65, 263);
-            label2.Name = "label2";
-            label2.Size = new Size(51, 20);
-            label2.TabIndex = 7;
-            label2.Text = "EMAIL";
-            label2.Click += label2_Click;
+            label4.AutoSize = true;
+            label4.Location = new Point(67, 177);
+            label4.Name = "label4";
+            label4.Size = new Size(33, 20);
+            label4.TabIndex = 9;
+            label4.Text = "CPF";
             // 
             // label3
             // 
@@ -190,22 +149,63 @@
             label3.Text = "TELEFONE";
             label3.Click += label3_Click;
             // 
-            // label4
+            // label2
             // 
-            label4.AutoSize = true;
-            label4.Location = new Point(67, 177);
-            label4.Name = "label4";
-            label4.Size = new Size(33, 20);
-            label4.TabIndex = 9;
-            label4.Text = "CPF";
+            label2.AutoSize = true;
+            label2.Location = new Point(65, 263);
+            label2.Name = "label2";
+            label2.Size = new Size(51, 20);
+            label2.TabIndex = 7;
+            label2.Text = "EMAIL";
+            label2.Click += label2_Click;
             // 
-            // maskedTextBox3
+            // Nascimento
             // 
-            maskedTextBox3.Location = new Point(65, 368);
-            maskedTextBox3.Mask = "(999) 000-0000";
-            maskedTextBox3.Name = "maskedTextBox3";
-            maskedTextBox3.Size = new Size(291, 27);
-            maskedTextBox3.TabIndex = 10;
+            Nascimento.AutoSize = true;
+            Nascimento.Location = new Point(65, 105);
+            Nascimento.Name = "Nascimento";
+            Nascimento.Size = new Size(88, 20);
+            Nascimento.TabIndex = 6;
+            Nascimento.Text = "Nascimento";
+            Nascimento.Click += Nascimento_Click;
+            // 
+            // maskedTextBox2
+            // 
+            maskedTextBox2.Location = new Point(65, 286);
+            maskedTextBox2.Name = "maskedTextBox2";
+            maskedTextBox2.Size = new Size(291, 27);
+            maskedTextBox2.TabIndex = 4;
+            // 
+            // maskedTextBox1
+            // 
+            maskedTextBox1.Location = new Point(67, 200);
+            maskedTextBox1.Mask = "000.000.000-00";
+            maskedTextBox1.Name = "maskedTextBox1";
+            maskedTextBox1.Size = new Size(291, 27);
+            maskedTextBox1.TabIndex = 3;
+            // 
+            // dateTimePicker1
+            // 
+            dateTimePicker1.Location = new Point(67, 128);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(293, 27);
+            dateTimePicker1.TabIndex = 2;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(65, 39);
+            label1.Name = "label1";
+            label1.Size = new Size(50, 20);
+            label1.TabIndex = 1;
+            label1.Text = "Nome";
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(67, 62);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(293, 27);
+            textBox1.TabIndex = 0;
             // 
             // tabControl1
             // 
@@ -230,6 +230,24 @@
             tabPage1.UseVisualStyleBackColor = true;
             tabPage1.Click += tabPage1_Click;
             // 
+            // listBox1
+            // 
+            listBox1.FormattingEnabled = true;
+            listBox1.Items.AddRange(new object[] { "Leitor Casual", "Leitor Multifera", "Leitor de Clássicos", "Leitor de Não Ficção", "Leitor Àvido", "Leitor de Ficção", "Leitor Crítico", "Leitor Acadêmico", "Leitor Tradicional", "Outros " });
+            listBox1.Location = new Point(25, 66);
+            listBox1.Name = "listBox1";
+            listBox1.Size = new Size(385, 204);
+            listBox1.TabIndex = 12;
+            // 
+            // Leitor
+            // 
+            Leitor.AutoSize = true;
+            Leitor.Location = new Point(25, 37);
+            Leitor.Name = "Leitor";
+            Leitor.Size = new Size(50, 20);
+            Leitor.TabIndex = 11;
+            Leitor.Text = "Nome";
+            // 
             // tabPage2
             // 
             tabPage2.Controls.Add(label8);
@@ -248,72 +266,14 @@
             tabPage2.Text = "Funcionário";
             tabPage2.UseVisualStyleBackColor = true;
             // 
-            // Leitor
+            // label8
             // 
-            Leitor.AutoSize = true;
-            Leitor.Location = new Point(25, 37);
-            Leitor.Name = "Leitor";
-            Leitor.Size = new Size(50, 20);
-            Leitor.TabIndex = 11;
-            Leitor.Text = "Nome";
-            // 
-            // listBox1
-            // 
-            listBox1.FormattingEnabled = true;
-            listBox1.Items.AddRange(new object[] { "Leitor Casual", "Leitor Multifera", "Leitor de Clássicos", "Leitor de Não Ficção", "Leitor Àvido", "Leitor de Ficção", "Leitor Crítico", "Leitor Acadêmico", "Leitor Tradicional", "Outros " });
-            listBox1.Location = new Point(25, 66);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new Size(385, 204);
-            listBox1.TabIndex = 12;
-            // 
-            // comboBox1
-            // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Gerente", "Atendente", "Caixa", "Estagiário" });
-            comboBox1.Location = new Point(28, 75);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(188, 28);
-            comboBox1.TabIndex = 0;
-            // 
-            // numericUpDown1
-            // 
-            numericUpDown1.Location = new Point(28, 209);
-            numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(188, 27);
-            numericUpDown1.TabIndex = 1;
-            // 
-            // numericUpDown2
-            // 
-            numericUpDown2.Location = new Point(248, 209);
-            numericUpDown2.Name = "numericUpDown2";
-            numericUpDown2.Size = new Size(187, 27);
-            numericUpDown2.TabIndex = 2;
-            numericUpDown2.ValueChanged += numericUpDown2_ValueChanged;
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(248, 76);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(188, 27);
-            textBox2.TabIndex = 3;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(248, 53);
-            label5.Name = "label5";
-            label5.Size = new Size(56, 20);
-            label5.TabIndex = 11;
-            label5.Text = "Função";
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Location = new Point(248, 186);
-            label6.Name = "label6";
-            label6.Size = new Size(102, 20);
-            label6.TabIndex = 12;
-            label6.Text = "Carga Horária";
+            label8.AutoSize = true;
+            label8.Location = new Point(29, 52);
+            label8.Name = "label8";
+            label8.Size = new Size(49, 20);
+            label8.TabIndex = 14;
+            label8.Text = "Cargo";
             // 
             // label7
             // 
@@ -324,14 +284,55 @@
             label7.TabIndex = 13;
             label7.Text = "Salário";
             // 
-            // label8
+            // label6
             // 
-            label8.AutoSize = true;
-            label8.Location = new Point(29, 52);
-            label8.Name = "label8";
-            label8.Size = new Size(49, 20);
-            label8.TabIndex = 14;
-            label8.Text = "Cargo";
+            label6.AutoSize = true;
+            label6.Location = new Point(248, 186);
+            label6.Name = "label6";
+            label6.Size = new Size(102, 20);
+            label6.TabIndex = 12;
+            label6.Text = "Carga Horária";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(248, 53);
+            label5.Name = "label5";
+            label5.Size = new Size(56, 20);
+            label5.TabIndex = 11;
+            label5.Text = "Função";
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(248, 76);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(188, 27);
+            textBox2.TabIndex = 3;
+            // 
+            // numericUpDown2
+            // 
+            numericUpDown2.Location = new Point(248, 209);
+            numericUpDown2.Name = "numericUpDown2";
+            numericUpDown2.Size = new Size(187, 27);
+            numericUpDown2.TabIndex = 2;
+            numericUpDown2.ValueChanged += numericUpDown2_ValueChanged;
+            // 
+            // numericUpDown1
+            // 
+            numericUpDown1.Location = new Point(28, 209);
+            numericUpDown1.Name = "numericUpDown1";
+            numericUpDown1.Size = new Size(188, 27);
+            numericUpDown1.TabIndex = 1;
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "Gerente", "Atendente", "Caixa", "Estagiário" });
+            comboBox1.Location = new Point(28, 75);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(188, 28);
+            comboBox1.TabIndex = 0;
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // button1
             // 
@@ -361,10 +362,12 @@
             tabPage1.PerformLayout();
             tabPage2.ResumeLayout(false);
             tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
             ResumeLayout(false);
+
         }
+
 
         #endregion
 
@@ -401,5 +404,6 @@
         private Label label5;
         private TextBox textBox2;
         private Button button1;
+
     }
 }
