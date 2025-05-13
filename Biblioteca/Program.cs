@@ -1,9 +1,13 @@
+using System.Numerics;
+using System.Collections.Generic;
+using System.Windows.Forms;
+
 namespace Biblioteca
 {
     internal static class Program
     {
         /// <summary>
-        ///  The main entry point for the application.
+        /// The main entry point for the application.
         /// </summary>
         [STAThread]
         static void Main()
@@ -15,3 +19,4 @@ namespace Biblioteca
         }
     }
 }
+//Nicolas Bastos
