@@ -1,6 +1,4 @@
-﻿using System.Windows.Forms;
-
-namespace Biblioteca
+﻿namespace Biblioteca
 {
     partial class Form1
     {
@@ -87,26 +85,5 @@ namespace Biblioteca
         private ContextMenuStrip contextMenuStrip1;
         private Button cadastro;
         private Button button1;
-
-        private BibliotecaServicoClass bibliotecaService = new();
-        // Exemplo de declaração dos controles
-        private NumericUpDown numericUpDown2;
-        private TextBox textBoxAutor;
-        private TextBox textBoxISBN;
-        private Button buttonAdicionarLivro;
-
-
-
-        private void buttonAdicionarLivro_Click(object sender, EventArgs e)
-        {
-            var livro = new LivroClasse
-            {
-                Titulo = numericUpDown2.Text,
-                Autor = textBoxAutor.Text,
-                ISBN = textBoxISBN.Text
-            };
-            bibliotecaService.AdicionarLivro(livro);
-            MessageBox.Show("Livro adicionado!");
-        }
     }
 }

@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Windows.Forms.VisualStyles;
 
 namespace Biblioteca
 {
@@ -51,28 +50,6 @@ namespace Biblioteca
         private void toolStripContainer1_ContentPanel_Load(object sender, EventArgs e)
         {
 
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label16_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            comboBox3.DataSource = Enum.GetValues(typeof(EnumGenericoTipo));
-            comboBox3.SelectedIndex = 0;
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            comboBox1.DataSource = Enum.GetValues(typeof(EnumExemplarStatus));
-            comboBox1.SelectedIndex = 0;
         }
     }
 }
