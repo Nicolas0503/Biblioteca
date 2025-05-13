@@ -1,4 +1,6 @@
-﻿namespace Biblioteca
+﻿using System.Windows.Forms;
+
+namespace Biblioteca
 {
     partial class Form1
     {
@@ -44,6 +46,7 @@
             // 
             cadastro.BackColor = SystemColors.InactiveBorder;
             cadastro.FlatAppearance.BorderColor = Color.FromArgb(255, 255, 128);
+            cadastro.ForeColor = SystemColors.HotTrack;
             cadastro.ImageAlign = ContentAlignment.TopCenter;
             cadastro.Location = new Point(57, 129);
             cadastro.Name = "cadastro";
@@ -57,6 +60,7 @@
             // 
             button1.BackColor = SystemColors.InactiveBorder;
             button1.FlatAppearance.BorderColor = Color.FromArgb(255, 255, 128);
+            button1.ForeColor = SystemColors.HotTrack;
             button1.ImageAlign = ContentAlignment.TopCenter;
             button1.Location = new Point(57, 271);
             button1.Name = "button1";
@@ -70,7 +74,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.PapayaWhip;
+            BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(430, 498);
             Controls.Add(button1);
             Controls.Add(cadastro);
@@ -85,5 +89,27 @@
         private ContextMenuStrip contextMenuStrip1;
         private Button cadastro;
         private Button button1;
+
+        private BibliotecaClasse bibliotecaService = new();
+        // Exemplo de declaração dos controles
+        private NumericUpDown numericUpDown2;
+        private TextBox textBoxAutor;
+        private TextBox textBoxISBN;
+        private Button buttonAdicionarLivro;
+
+
+
+        private void buttonAdicionarLivro_Click(object sender, EventArgs e)
+        {
+            var livro = new LivroClasse
+            {
+                Titulo = numericUpDown2.Text,
+                Autor = textBoxAutor.Text,
+                ISBN = textBoxISBN.Text
+            };
+            bibliotecaService.AdicionarLivro(livro);
+            MessageBox.Show("Livro adicionado!");
+        }
     }
 }
+//Nícolas Bastos
