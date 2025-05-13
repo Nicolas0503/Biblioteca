@@ -147,6 +147,34 @@
             label8.TabIndex = 14;
             label8.Text = "Título";
             // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Location = new Point(30, 168);
+            label10.Name = "label10";
+            label10.Size = new Size(41, 20);
+            label10.TabIndex = 16;
+            label10.Text = "ISBN";
+            label10.Click += label10_Click;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Location = new Point(30, 110);
+            label9.Name = "label9";
+            label9.Size = new Size(98, 20);
+            label9.TabIndex = 15;
+            label9.Text = "Tipo de Capa";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(30, 39);
+            label8.Name = "label8";
+            label8.Size = new Size(47, 20);
+            label8.TabIndex = 14;
+            label8.Text = "Título";
+            // 
             // panel1
             // 
             panel1.BorderStyle = BorderStyle.FixedSingle;

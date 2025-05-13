@@ -1,3 +1,8 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 ﻿using System.Collections.Generic;
 
@@ -32,7 +37,7 @@ namespace Biblioteca
 
         // Exemplo de busca de livro por ISBN
         public LivroClasse BuscarLivroPorISBN(string isbn)
-        {
+    {
             return Livros.Find(l => l.ISBN == isbn);
         }
 
