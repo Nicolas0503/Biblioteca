@@ -22,6 +22,7 @@ namespace Biblioteca
         string telefone,
         string tipo) : base(nome, nascimento, cpf, email, telefone)
 
+        public override void ListaLeitor(LeitorClasse leitor)
         {
             Tipo = tipo;
             ExemplaresLeitor = new List<Exemplar>();

@@ -18,6 +18,7 @@
         string genero,
         int status)
 
+        public override string ToString()
         {
             Titulo = titulo;
             SubTitulo = subTitulo;

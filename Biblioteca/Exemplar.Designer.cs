@@ -119,7 +119,62 @@
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Livro";
             tabPage1.ToolTipText = "gtdgdg";
-            tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Location = new Point(30, 168);
+            label10.Name = "label10";
+            label10.Size = new Size(41, 20);
+            label10.TabIndex = 16;
+            label10.Text = "ISBN";
+            label10.Click += label10_Click;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Location = new Point(30, 110);
+            label9.Name = "label9";
+            label9.Size = new Size(98, 20);
+            label9.TabIndex = 15;
+            label9.Text = "Tipo de Capa";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(30, 39);
+            label8.Name = "label8";
+            label8.Size = new Size(47, 20);
+            label8.TabIndex = 14;
+            label8.Text = "Título";
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Location = new Point(30, 168);
+            label10.Name = "label10";
+            label10.Size = new Size(41, 20);
+            label10.TabIndex = 16;
+            label10.Text = "ISBN";
+            label10.Click += label10_Click;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Location = new Point(30, 110);
+            label9.Name = "label9";
+            label9.Size = new Size(98, 20);
+            label9.TabIndex = 15;
+            label9.Text = "Tipo de Capa";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(30, 39);
+            label8.Name = "label8";
+            label8.Size = new Size(47, 20);
+            label8.TabIndex = 14;
+            label8.Text = "Título";
             // 
             // label10
             // 
@@ -301,6 +356,38 @@
             numericUpDownEdicaoRevista.Name = "numericUpDownEdicaoRevista";
             numericUpDownEdicaoRevista.Size = new Size(150, 27);
             numericUpDownEdicaoRevista.TabIndex = 0;
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Location = new Point(78, 129);
+            label12.Name = "label12";
+            label12.Size = new Size(54, 20);
+            label12.TabIndex = 15;
+            label12.Text = "Edição";
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Location = new Point(78, 230);
+            label11.Name = "label11";
+            label11.Size = new Size(59, 20);
+            label11.TabIndex = 14;
+            label11.Text = "Páginas";
+            // 
+            // numericUpDown5
+            // 
+            numericUpDown5.Location = new Point(78, 253);
+            numericUpDown5.Name = "numericUpDown5";
+            numericUpDown5.Size = new Size(150, 27);
+            numericUpDown5.TabIndex = 1;
+            // 
+            // numericUpDown4
+            // 
+            numericUpDown4.Location = new Point(78, 152);
+            numericUpDown4.Name = "numericUpDown4";
+            numericUpDown4.Size = new Size(150, 27);
+            numericUpDown4.TabIndex = 0;
             // 
             // tabPage3
             // 
@@ -540,6 +627,15 @@
             tabPage5.Text = "Exemplar";
             tabPage5.UseVisualStyleBackColor = true;
             // 
+            // button1
+            // 
+            button1.Location = new Point(82, 642);
+            button1.Name = "button1";
+            button1.Size = new Size(628, 29);
+            button1.TabIndex = 2;
+            button1.Text = "Salvar";
+            button1.UseVisualStyleBackColor = true;
+            // 
             // Exemplar
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -550,6 +646,7 @@
             Controls.Add(tabControl1);
             Name = "Exemplar";
             Text = "Editora";
+            Load += Exemplar_Load_1;
             tabControl1.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
             tabPage1.PerformLayout();
@@ -623,3 +720,4 @@
         private TabPage tabPage5;
     }
 }
+//Nícolas Bastos

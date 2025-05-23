@@ -62,6 +62,7 @@ namespace Biblioteca
             // 
             cadastro.BackColor = SystemColors.InactiveBorder;
             cadastro.FlatAppearance.BorderColor = Color.FromArgb(255, 255, 128);
+            cadastro.ForeColor = SystemColors.HotTrack;
             cadastro.ImageAlign = ContentAlignment.TopCenter;
             cadastro.Location = new Point(12, 25);
             cadastro.Name = "cadastro";
@@ -75,6 +76,7 @@ namespace Biblioteca
             // 
             button1.BackColor = SystemColors.InactiveBorder;
             button1.FlatAppearance.BorderColor = Color.FromArgb(255, 255, 128);
+            button1.ForeColor = SystemColors.HotTrack;
             button1.ImageAlign = ContentAlignment.TopCenter;
             button1.Location = new Point(12, 112);
             button1.Name = "button1";

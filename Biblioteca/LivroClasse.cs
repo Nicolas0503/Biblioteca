@@ -9,6 +9,7 @@ namespace Biblioteca
     internal class LivroClasse : ExemplarClasse
     {
         public int Paginas { get; set; }
+        public string Autor { get; set; }
         public string TipoCapa { get; set; }
         public string Isbn { get; set; }
         public LivroClasse(string titulo,

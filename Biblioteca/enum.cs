@@ -61,6 +61,7 @@ namespace Biblioteca
         [Description("Outros")]
         Outros = 13,
     }
+
     public static class EnumExtensions
     {
         public static string GetDescription(this Enum GenericEnum)
@@ -78,5 +79,6 @@ namespace Biblioteca
             return GenericEnum.ToString();
         }
     }
+
 }
 //Nicolas Bastos

@@ -168,9 +168,10 @@
             // Nascimento
             // 
             Nascimento.AutoSize = true;
+            Nascimento.ForeColor = Color.Black;
             Nascimento.Location = new Point(65, 105);
             Nascimento.Name = "Nascimento";
-            Nascimento.Size = new Size(88, 20);
+            Nascimento.Size = new Size(90, 20);
             Nascimento.TabIndex = 6;
             Nascimento.Text = "Nascimento";
             Nascimento.Click += Nascimento_Click;
@@ -232,13 +233,13 @@
             tabPage1.Controls.Add(button2);
             tabPage1.Controls.Add(listBoxTipoLeitor);
             tabPage1.Controls.Add(Leitor);
-            tabPage1.Location = new Point(4, 29);
+            tabPage1.ForeColor = SystemColors.ActiveCaptionText;
+            tabPage1.Location = new Point(4, 28);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
             tabPage1.Size = new Size(820, 291);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Leitor";
-            tabPage1.UseVisualStyleBackColor = true;
             tabPage1.Click += tabPage1_Click;
             // 
             // dataGridView1
@@ -290,6 +291,7 @@
             // 
             // tabPage2
             // 
+            tabPage2.BackColor = SystemColors.Menu;
             tabPage2.Controls.Add(label8);
             tabPage2.Controls.Add(label7);
             tabPage2.Controls.Add(label6);
@@ -415,6 +417,7 @@
             Controls.Add(groupBox1);
             Name = "Pessoa";
             Text = "Pessoa";
+            TransparencyKey = Color.Transparent;
             Load += Pessoa_Load;
             contextMenuStrip3.ResumeLayout(false);
             groupBox1.ResumeLayout(false);
@@ -473,4 +476,5 @@
         private Button button5;
         private DataGridView dataGridView1;
     }
+    //Nícolas Bastos
 }
