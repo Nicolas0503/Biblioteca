@@ -39,16 +39,16 @@ namespace Biblioteca
             dataGridViewFuncionario = new DataGridView();
             dataGridView1 = new DataGridView();
             tabPage2 = new TabPage();
-            tabPage3 = new TabPage();
             dataGridViewLeitores = new DataGridView();
+            tabPage3 = new TabPage();
             dataGridViewExemplares = new DataGridView();
             Funcionários.SuspendLayout();
             tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewFuncionario).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             tabPage2.SuspendLayout();
-            tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewLeitores).BeginInit();
+            tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewExemplares).BeginInit();
             SuspendLayout();
             // 
@@ -62,6 +62,7 @@ namespace Biblioteca
             // 
             cadastro.BackColor = SystemColors.InactiveBorder;
             cadastro.FlatAppearance.BorderColor = Color.FromArgb(255, 255, 128);
+            cadastro.ForeColor = SystemColors.HotTrack;
             cadastro.ImageAlign = ContentAlignment.TopCenter;
             cadastro.Location = new Point(12, 25);
             cadastro.Name = "cadastro";
@@ -75,6 +76,7 @@ namespace Biblioteca
             // 
             button1.BackColor = SystemColors.InactiveBorder;
             button1.FlatAppearance.BorderColor = Color.FromArgb(255, 255, 128);
+            button1.ForeColor = SystemColors.HotTrack;
             button1.ImageAlign = ContentAlignment.TopCenter;
             button1.Location = new Point(12, 112);
             button1.Name = "button1";
@@ -94,6 +96,7 @@ namespace Biblioteca
             Funcionários.SelectedIndex = 0;
             Funcionários.Size = new Size(1046, 461);
             Funcionários.TabIndex = 2;
+            
             // 
             // tabPage1
             // 
@@ -116,6 +119,7 @@ namespace Biblioteca
             dataGridViewFuncionario.RowHeadersWidth = 51;
             dataGridViewFuncionario.Size = new Size(1032, 422);
             dataGridViewFuncionario.TabIndex = 1;
+            dataGridViewFuncionario.DoubleClick += dataGridViewFuncionario_DoubleClick;
             // 
             // dataGridView1
             // 
@@ -138,16 +142,6 @@ namespace Biblioteca
             tabPage2.UseVisualStyleBackColor = true;
             tabPage2.Click += tabPage2_Click;
             // 
-            // tabPage3
-            // 
-            tabPage3.Controls.Add(dataGridViewExemplares);
-            tabPage3.Location = new Point(4, 29);
-            tabPage3.Name = "tabPage3";
-            tabPage3.Size = new Size(1038, 428);
-            tabPage3.TabIndex = 2;
-            tabPage3.Text = "Exemplares";
-            tabPage3.UseVisualStyleBackColor = true;
-            // 
             // dataGridViewLeitores
             // 
             dataGridViewLeitores.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -158,6 +152,17 @@ namespace Biblioteca
             dataGridViewLeitores.Size = new Size(1032, 422);
             dataGridViewLeitores.TabIndex = 0;
             dataGridViewLeitores.CellContentClick += dataGridView2_CellContentClick;
+            dataGridViewLeitores.DoubleClick += dataGridViewLeitores_DoubleClick;
+            // 
+            // tabPage3
+            // 
+            tabPage3.Controls.Add(dataGridViewExemplares);
+            tabPage3.Location = new Point(4, 29);
+            tabPage3.Name = "tabPage3";
+            tabPage3.Size = new Size(1038, 428);
+            tabPage3.TabIndex = 2;
+            tabPage3.Text = "Exemplares";
+            tabPage3.UseVisualStyleBackColor = true;
             // 
             // dataGridViewExemplares
             // 
@@ -168,6 +173,7 @@ namespace Biblioteca
             dataGridViewExemplares.RowHeadersWidth = 51;
             dataGridViewExemplares.Size = new Size(1038, 428);
             dataGridViewExemplares.TabIndex = 0;
+            dataGridViewExemplares.DoubleClick += dataGridViewExemplares_DoubleClick;
             // 
             // Form1
             // 
@@ -186,8 +192,8 @@ namespace Biblioteca
             ((System.ComponentModel.ISupportInitialize)dataGridViewFuncionario).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             tabPage2.ResumeLayout(false);
-            tabPage3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridViewLeitores).EndInit();
+            tabPage3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridViewExemplares).EndInit();
             ResumeLayout(false);
         }

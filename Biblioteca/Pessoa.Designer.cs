@@ -65,8 +65,8 @@
             numericUpDownSalario = new NumericUpDown();
             comboBoxCargo = new ComboBox();
             ButtonSalvar = new Button();
-            button4 = new Button();
-            button5 = new Button();
+            buttonEditar = new Button();
+            buttonExcluir = new Button();
             contextMenuStrip3.SuspendLayout();
             groupBox1.SuspendLayout();
             tabControlPessoa.SuspendLayout();
@@ -130,6 +130,8 @@
             // 
             // maskedTextBoxTelefone
             // 
+            maskedTextBoxTelefone.BackColor = Color.FromArgb(192, 255, 192);
+            maskedTextBoxTelefone.ForeColor = SystemColors.HighlightText;
             maskedTextBoxTelefone.Location = new Point(65, 368);
             maskedTextBoxTelefone.Mask = "(999) 000-0000";
             maskedTextBoxTelefone.Name = "maskedTextBoxTelefone";
@@ -168,6 +170,7 @@
             // Nascimento
             // 
             Nascimento.AutoSize = true;
+            Nascimento.ForeColor = Color.Black;
             Nascimento.Location = new Point(65, 105);
             Nascimento.Name = "Nascimento";
             Nascimento.Size = new Size(88, 20);
@@ -177,6 +180,8 @@
             // 
             // maskedTextBoxEmail
             // 
+            maskedTextBoxEmail.BackColor = Color.FromArgb(192, 255, 192);
+            maskedTextBoxEmail.ForeColor = SystemColors.HighlightText;
             maskedTextBoxEmail.Location = new Point(65, 286);
             maskedTextBoxEmail.Name = "maskedTextBoxEmail";
             maskedTextBoxEmail.Size = new Size(291, 27);
@@ -184,6 +189,8 @@
             // 
             // maskedTextBoxCpf
             // 
+            maskedTextBoxCpf.BackColor = Color.FromArgb(192, 255, 192);
+            maskedTextBoxCpf.ForeColor = SystemColors.HighlightText;
             maskedTextBoxCpf.Location = new Point(67, 200);
             maskedTextBoxCpf.Mask = "000.000.000-00";
             maskedTextBoxCpf.Name = "maskedTextBoxCpf";
@@ -193,6 +200,10 @@
             // 
             // dateTimePickerNascimento
             // 
+            dateTimePickerNascimento.CalendarMonthBackground = Color.FromArgb(192, 255, 192);
+            dateTimePickerNascimento.CalendarTitleForeColor = Color.Aqua;
+            dateTimePickerNascimento.CalendarTrailingForeColor = Color.FromArgb(255, 192, 128);
+            dateTimePickerNascimento.Format = DateTimePickerFormat.Time;
             dateTimePickerNascimento.Location = new Point(67, 128);
             dateTimePickerNascimento.Name = "dateTimePickerNascimento";
             dateTimePickerNascimento.Size = new Size(293, 27);
@@ -209,6 +220,8 @@
             // 
             // textBoxNome
             // 
+            textBoxNome.BackColor = SystemColors.GradientActiveCaption;
+            textBoxNome.ForeColor = SystemColors.HighlightText;
             textBoxNome.Location = new Point(67, 62);
             textBoxNome.Name = "textBoxNome";
             textBoxNome.Size = new Size(293, 27);
@@ -232,13 +245,13 @@
             tabPage1.Controls.Add(button2);
             tabPage1.Controls.Add(listBoxTipoLeitor);
             tabPage1.Controls.Add(Leitor);
+            tabPage1.ForeColor = SystemColors.ActiveCaptionText;
             tabPage1.Location = new Point(4, 29);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
             tabPage1.Size = new Size(820, 291);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Leitor";
-            tabPage1.UseVisualStyleBackColor = true;
             tabPage1.Click += tabPage1_Click;
             // 
             // dataGridView1
@@ -271,12 +284,15 @@
             // 
             // listBoxTipoLeitor
             // 
+            listBoxTipoLeitor.BackColor = SystemColors.Highlight;
+            listBoxTipoLeitor.ForeColor = SystemColors.HighlightText;
             listBoxTipoLeitor.FormattingEnabled = true;
             listBoxTipoLeitor.Items.AddRange(new object[] { "Leitor Casual", "Leitor Multifera", "Leitor de Clássicos", "Leitor de Não Ficção", "Leitor Àvido", "Leitor de Ficção", "Leitor Crítico", "Leitor Acadêmico", "Leitor Tradicional", "Outros " });
             listBoxTipoLeitor.Location = new Point(25, 66);
             listBoxTipoLeitor.Name = "listBoxTipoLeitor";
             listBoxTipoLeitor.Size = new Size(273, 204);
             listBoxTipoLeitor.TabIndex = 12;
+            listBoxTipoLeitor.SelectedIndexChanged += listBoxTipoLeitor_SelectedIndexChanged;
             // 
             // Leitor
             // 
@@ -290,6 +306,7 @@
             // 
             // tabPage2
             // 
+            tabPage2.BackColor = SystemColors.Menu;
             tabPage2.Controls.Add(label8);
             tabPage2.Controls.Add(label7);
             tabPage2.Controls.Add(label6);
@@ -360,9 +377,12 @@
             // numericUpDownSalario
             // 
             numericUpDownSalario.Location = new Point(140, 209);
+            numericUpDownSalario.Maximum = new decimal(new int[] { -727379969, 232, 0, 0 });
+            numericUpDownSalario.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
             numericUpDownSalario.Name = "numericUpDownSalario";
             numericUpDownSalario.Size = new Size(188, 27);
             numericUpDownSalario.TabIndex = 1;
+            numericUpDownSalario.Value = new decimal(new int[] { 99999999, 0, 0, 0 });
             // 
             // comboBoxCargo
             // 
@@ -384,37 +404,39 @@
             ButtonSalvar.UseVisualStyleBackColor = true;
             ButtonSalvar.Click += button1_Click;
             // 
-            // button4
+            // buttonEditar
             // 
-            button4.Location = new Point(834, 393);
-            button4.Name = "button4";
-            button4.Size = new Size(205, 29);
-            button4.TabIndex = 7;
-            button4.Text = "Editar";
-            button4.UseVisualStyleBackColor = true;
-            button4.Click += button4_Click;
+            buttonEditar.Location = new Point(834, 393);
+            buttonEditar.Name = "buttonEditar";
+            buttonEditar.Size = new Size(205, 29);
+            buttonEditar.TabIndex = 7;
+            buttonEditar.Text = "Editar";
+            buttonEditar.UseVisualStyleBackColor = true;
+            buttonEditar.Click += button4_Click;
             // 
-            // button5
+            // buttonExcluir
             // 
-            button5.Location = new Point(1091, 393);
-            button5.Name = "button5";
-            button5.Size = new Size(205, 29);
-            button5.TabIndex = 8;
-            button5.Text = "Excluir";
-            button5.UseVisualStyleBackColor = true;
+            buttonExcluir.Location = new Point(1091, 393);
+            buttonExcluir.Name = "buttonExcluir";
+            buttonExcluir.Size = new Size(205, 29);
+            buttonExcluir.TabIndex = 8;
+            buttonExcluir.Text = "Excluir";
+            buttonExcluir.UseVisualStyleBackColor = true;
+            buttonExcluir.Click += buttonExcluir_Click;
             // 
             // Pessoa
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1353, 453);
-            Controls.Add(button5);
-            Controls.Add(button4);
+            Controls.Add(buttonExcluir);
+            Controls.Add(buttonEditar);
             Controls.Add(ButtonSalvar);
             Controls.Add(tabControlPessoa);
             Controls.Add(groupBox1);
             Name = "Pessoa";
             Text = "Pessoa";
+            TransparencyKey = Color.Transparent;
             Load += Pessoa_Load;
             contextMenuStrip3.ResumeLayout(false);
             groupBox1.ResumeLayout(false);
@@ -469,8 +491,9 @@
         private Button ButtonSalvar;
         private Button button3;
         private Button button2;
-        private Button button4;
-        private Button button5;
+        private Button buttonEditar;
+        private Button buttonExcluir;
         private DataGridView dataGridView1;
     }
+    //Nícolas Bastos
 }

@@ -7,12 +7,14 @@ namespace Biblioteca
         public List<FuncionarioClasse> funcionarios;
         public List<LeitorClasse> leitores;
         public List<ExemplarClasse> exemplares;
+
         public Form1()
         {
             InitializeComponent();
             funcionarios = new List<FuncionarioClasse>();
             leitores = new List<LeitorClasse>();
             exemplares = new List<ExemplarClasse>();
+
             CargaInicial();
             AtualizarDataGridView();
 
@@ -109,6 +111,73 @@ namespace Biblioteca
         {
 
         }
+
+
+
+        private void dataGridViewFuncionario_DoubleClick(object sender, EventArgs e)
+        {
+            // armazena o objeto selecionado
+            var funcionario = dataGridViewFuncionario.CurrentRow.DataBoundItem as FuncionarioClasse;
+
+            // validar se o objeto é nulo
+            if (funcionario == null)
+
+            {
+                MessageBox.Show("Selecione um funcionário");
+                return;
+            }
+
+            //MessageBox.Show($"{ funcionario.GetType().Name }, {funcionario.Nome}");
+            // abre a tela de edição de funcionário com o objeto selecionado
+            var form = new Pessoa(funcionarios, funcionario);
+            form.StartPosition = FormStartPosition.CenterParent;
+            form.ShowDialog();
+            AtualizarDataGridView();
+
+        }
+
+        private void dataGridViewLeitores_DoubleClick(object sender, EventArgs e)
+        {
+            var leitor = dataGridViewLeitores.CurrentRow.DataBoundItem as LeitorClasse;
+
+            // validar se o objeto é nulo
+            if (leitor == null)
+
+            {
+                MessageBox.Show("Selecione um leitor");
+                return;
+            }
+
+            //MessageBox.Show($"{ funcionario.GetType().Name }, {funcionario.Nome}");
+            // abre a tela de edição de funcionário com o objeto selecionado
+            var form = new Pessoa(leitores, leitor);
+            form.StartPosition = FormStartPosition.CenterParent;
+            form.ShowDialog();
+            AtualizarDataGridView();
+
+
+        }
+
+        private void dataGridViewExemplares_DoubleClick(object sender, EventArgs e)
+        {
+            // armazena o objeto selecionado
+            var exemplar = dataGridViewExemplares.CurrentRow.DataBoundItem as ExemplarClasse;
+            // validar se o objeto é nulo
+            if (exemplar == null)
+            {
+                MessageBox.Show("Selecione um exemplar");
+                return;
+            }
+            // como teste, mostra o tipo do objeto e o nome
+            //MessageBox.Show($"{exemplar.GetType().Name}, {exemplar.Titulo}");
+            // abre a tela de edição de exemplar com o objeto selecionado
+            var form = new Exemplar(exemplares, exemplar);
+            form.StartPosition = FormStartPosition.CenterParent;
+            form.ShowDialog();
+            AtualizarDataGridView();
+        }
+
+        
     }
 }
 //Nicolas Bastos

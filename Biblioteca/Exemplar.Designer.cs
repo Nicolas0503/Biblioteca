@@ -74,6 +74,8 @@
             comboBoxGenero = new ComboBox();
             tabControlExemplar = new TabControl();
             tabPage5 = new TabPage();
+            buttonEditar = new Button();
+            buttonExcluir = new Button();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             panel1.SuspendLayout();
@@ -119,7 +121,6 @@
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Livro";
             tabPage1.ToolTipText = "gtdgdg";
-            tabPage1.UseVisualStyleBackColor = true;
             // 
             // label10
             // 
@@ -203,9 +204,12 @@
             // numericUpDownTamanho
             // 
             numericUpDownTamanho.Location = new Point(43, 102);
+            numericUpDownTamanho.Maximum = new decimal(new int[] { 999999999, 0, 0, 0 });
+            numericUpDownTamanho.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
             numericUpDownTamanho.Name = "numericUpDownTamanho";
             numericUpDownTamanho.Size = new Size(150, 27);
             numericUpDownTamanho.TabIndex = 1;
+            numericUpDownTamanho.Value = new decimal(new int[] { 1, 0, 0, 0 });
             numericUpDownTamanho.Visible = false;
             // 
             // comboBoxFormato
@@ -251,9 +255,12 @@
             // numericUpDownPaginasLivro
             // 
             numericUpDownPaginasLivro.Location = new Point(30, 62);
+            numericUpDownPaginasLivro.Maximum = new decimal(new int[] { 99999999, 0, 0, 0 });
+            numericUpDownPaginasLivro.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
             numericUpDownPaginasLivro.Name = "numericUpDownPaginasLivro";
             numericUpDownPaginasLivro.Size = new Size(247, 27);
             numericUpDownPaginasLivro.TabIndex = 0;
+            numericUpDownPaginasLivro.Value = new decimal(new int[] { 1, 0, 0, 0 });
             // 
             // numericUpDown1
             // 
@@ -290,17 +297,23 @@
             // numericUpDownPaginasRevista
             // 
             numericUpDownPaginasRevista.Location = new Point(78, 253);
+            numericUpDownPaginasRevista.Maximum = new decimal(new int[] { 70000000, 0, 0, 0 });
+            numericUpDownPaginasRevista.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
             numericUpDownPaginasRevista.Name = "numericUpDownPaginasRevista";
             numericUpDownPaginasRevista.Size = new Size(150, 27);
             numericUpDownPaginasRevista.TabIndex = 1;
+            numericUpDownPaginasRevista.Value = new decimal(new int[] { 1, 0, 0, 0 });
             numericUpDownPaginasRevista.ValueChanged += numericUpDown5_ValueChanged;
             // 
             // numericUpDownEdicaoRevista
             // 
             numericUpDownEdicaoRevista.Location = new Point(78, 152);
+            numericUpDownEdicaoRevista.Maximum = new decimal(new int[] { 700000000, 0, 0, 0 });
+            numericUpDownEdicaoRevista.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
             numericUpDownEdicaoRevista.Name = "numericUpDownEdicaoRevista";
             numericUpDownEdicaoRevista.Size = new Size(150, 27);
             numericUpDownEdicaoRevista.TabIndex = 0;
+            numericUpDownEdicaoRevista.Value = new decimal(new int[] { 1, 0, 0, 0 });
             // 
             // tabPage3
             // 
@@ -343,9 +356,12 @@
             // numericUpDown6
             // 
             numericUpDown6.Location = new Point(59, 104);
+            numericUpDown6.Maximum = new decimal(new int[] { 90000000, 0, 0, 0 });
+            numericUpDown6.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
             numericUpDown6.Name = "numericUpDown6";
             numericUpDown6.Size = new Size(150, 27);
             numericUpDown6.TabIndex = 1;
+            numericUpDown6.Value = new decimal(new int[] { 1, 0, 0, 0 });
             // 
             // tabPage4
             // 
@@ -379,9 +395,9 @@
             // 
             // buttonSalvar
             // 
-            buttonSalvar.Location = new Point(82, 642);
+            buttonSalvar.Location = new Point(39, 631);
             buttonSalvar.Name = "buttonSalvar";
-            buttonSalvar.Size = new Size(628, 29);
+            buttonSalvar.Size = new Size(312, 29);
             buttonSalvar.TabIndex = 2;
             buttonSalvar.Text = "Salvar";
             buttonSalvar.UseVisualStyleBackColor = true;
@@ -418,11 +434,14 @@
             // 
             // numericUpDownAnoPublicacao
             // 
+            numericUpDownAnoPublicacao.ForeColor = Color.White;
             numericUpDownAnoPublicacao.Location = new Point(8, 322);
-            numericUpDownAnoPublicacao.Maximum = new decimal(new int[] { 2030, 0, 0, 0 });
+            numericUpDownAnoPublicacao.Maximum = new decimal(new int[] { 1410065407, 2, 0, 0 });
+            numericUpDownAnoPublicacao.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
             numericUpDownAnoPublicacao.Name = "numericUpDownAnoPublicacao";
             numericUpDownAnoPublicacao.Size = new Size(261, 27);
             numericUpDownAnoPublicacao.TabIndex = 5;
+            numericUpDownAnoPublicacao.Value = new decimal(new int[] { 1, 0, 0, 0 });
             // 
             // comboBoxStatus
             // 
@@ -518,6 +537,7 @@
             // 
             // tabPage5
             // 
+            tabPage5.BackColor = Color.WhiteSmoke;
             tabPage5.Controls.Add(label1);
             tabPage5.Controls.Add(comboBoxGenero);
             tabPage5.Controls.Add(numericUpDownAnoPublicacao);
@@ -538,13 +558,34 @@
             tabPage5.Size = new Size(311, 532);
             tabPage5.TabIndex = 0;
             tabPage5.Text = "Exemplar";
-            tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // buttonEditar
+            // 
+            buttonEditar.Location = new Point(386, 631);
+            buttonEditar.Name = "buttonEditar";
+            buttonEditar.Size = new Size(218, 29);
+            buttonEditar.TabIndex = 16;
+            buttonEditar.Text = "Editar";
+            buttonEditar.UseVisualStyleBackColor = true;
+            buttonEditar.Click += buttonEditar_Click;
+            // 
+            // buttonExcluir
+            // 
+            buttonExcluir.Location = new Point(623, 631);
+            buttonExcluir.Name = "buttonExcluir";
+            buttonExcluir.Size = new Size(116, 29);
+            buttonExcluir.TabIndex = 17;
+            buttonExcluir.Text = "Excluir";
+            buttonExcluir.UseVisualStyleBackColor = true;
+            buttonExcluir.Click += buttonExcluir_Click;
             // 
             // Exemplar
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1281, 719);
+            Controls.Add(buttonExcluir);
+            Controls.Add(buttonEditar);
             Controls.Add(tabControlExemplar);
             Controls.Add(buttonSalvar);
             Controls.Add(tabControl1);
@@ -621,5 +662,8 @@
         private ComboBox comboBoxGenero;
         private TabControl tabControlExemplar;
         private TabPage tabPage5;
+        private Button buttonEditar;
+        private Button buttonExcluir;
     }
 }
+//Nícolas Bastos

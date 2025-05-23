@@ -12,18 +12,19 @@ namespace Biblioteca
 {
     public  class LeitorClasse : PessoaClasse
     {
-        public List<Exemplar> ExemplaresLeitor { get; set; }
-        public List<Emprestimo> EmprestimosLeitor { get; set; }
-        public string Tipo { get; set; }
-        public LeitorClasse(string nome,
-        DateTime nascimento,
-        string cpf,
-        string email,
-        string telefone,
-        string tipo) : base(nome, nascimento, cpf, email, telefone)
-
+        public LeitorClasse(string nome, DateTime nascimento, string cpf, string email, string telefone,string tipo ) : base(nome, nascimento, cpf, email, telefone)
         {
             Tipo = tipo;
+        }
+
+        public List<Exemplar> ExemplaresLeitor { get; set; }
+        public List<Emprestimo> EmprestimosLeitor { get; set; }
+
+        public string Tipo { get; set; }
+
+        public void ListaLeitor(LeitorClasse leitor)
+        {
+            
             ExemplaresLeitor = new List<Exemplar>();
             EmprestimosLeitor = new List<Emprestimo>();
         }
