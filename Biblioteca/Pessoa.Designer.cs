@@ -173,7 +173,7 @@
             Nascimento.ForeColor = Color.Black;
             Nascimento.Location = new Point(65, 105);
             Nascimento.Name = "Nascimento";
-            Nascimento.Size = new Size(88, 20);
+            Nascimento.Size = new Size(90, 20);
             Nascimento.TabIndex = 6;
             Nascimento.Text = "Nascimento";
             Nascimento.Click += Nascimento_Click;
